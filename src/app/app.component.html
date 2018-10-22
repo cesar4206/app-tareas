@@ -1,7 +1,7 @@
 <div class="container w-50 mx-auto shadow-lg rounded mt-3 p-3">
   <h1 class="display-1 text-center">Lista de Tareas</h1>
   <input #textoTarea type="text" placeholder="¿Que vamos a hacer hoy?" class="form-control" 
-  (keyup.enter)="agregarTarea(textoTarea.value)
+  (keyup.enter)="agregarTarea(textoTarea.value);
   textoTarea.value = ' ' ">
   <ul class="list-group mb-3">
     <li class="list-group-item" *ngFor="let tarea of tareas">
@@ -17,7 +17,7 @@
     </li>
   </ul>
   <p *ngIf="tareas.length > 0">
-    <span class="badge badge-warning">{{ tareas.length }}</span>
+    <span class="badge badge-warning"> {{ tareas.length }} </span>
   Tareas Pendientes</p>
 
   <p *ngIf="tareas.length > 0">
