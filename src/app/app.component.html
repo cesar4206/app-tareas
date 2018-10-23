@@ -10,7 +10,10 @@
           <input [checked]="tarea.completada" 
           (click)="toggleTarea(tarea.id)" type="checkbox" class="form-check-input">
 
-        <label class="form-check-label">{{ tarea.titulo }}</label>
+        <label class="form-check-label" 
+        [class.text-success]="tarea.completada" 
+        [style.text-decoration]=" tarea.completada ? 'line-through' : 'none' "
+        >{{ tarea.titulo }}</label>
 
         <button class="close" type="button" (click)="eliminarTarea(tarea.id)">&times;</button>
       </div>
