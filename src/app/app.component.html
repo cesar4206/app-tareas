@@ -19,11 +19,5 @@
       </div>
     </li>
   </ul>
-  <p *ngIf="tareas.length > 0">
-    <span class="badge badge-warning"> {{ tareas.length }} </span>
-  Tareas Pendientes</p>
-
-  <p *ngIf="tareas.length > 0">
-    <span class="badge badge-success">{{ tareasCompletadas() }}</span>
-  Tareas Completadas</p>
+  <app-pie [totalTareas]="tareas.length" tareasCompletadas="tareasCompletadas()"></app-pie>
 </div>
